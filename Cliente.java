@@ -9,12 +9,11 @@ public class Cliente {
 	private String Nombre;
 	private String Direccion;
 	private int Telefono;
-        
+        Scanner leer = new Scanner(System.in);
         
 
 	public void IngresarClave() {
             int a ;
-            Scanner leer = new Scanner(System.in);
             System.out.println("Ingrese clave");
              a = leer.nextInt();
             if(a!= Identificacion){
@@ -38,8 +37,14 @@ public class Cliente {
             Cuenta caj= new Cuenta();
             
             caj.getSaldo()=dineroactual;
-            
-            
+            System.out.println("Dinero actual : "+dineroactual);
+            System.out.println("ingrese valor a retirar :");
+            sacardinero = leer.nextInt();
+            if(dineroactual<sacardinero || sacardinero>0){
+            	System.out.println("saldo insuficiente, ingrese nuevamente el monto");
+            		sacardinero = leer.nextInt();
+            }else
+           	caj.setSaldo(dineroactual-sacardinero);
 	}
 
 }

@@ -1,6 +1,6 @@
 package cajero;
 
-import java.util.Scanner;
+
 
 public class Cliente {
 
@@ -9,21 +9,35 @@ public class Cliente {
 	private String Nombre;
 	private String Direccion;
 	private int Telefono;
-        Scanner leer = new Scanner(System.in);
+        private Tarjeta tarjeta[];
+        private Cuenta cuenta[];
+
+    public Cliente(int Num_Cliente, int Identificacion, String Nombre, String Direccion, int Telefono) {
+        this.Num_Cliente = Num_Cliente;
+        this.Identificacion = Identificacion;
+        this.Nombre = Nombre;
+        this.Direccion = Direccion;
+        this.Telefono = Telefono;
+    }
         
 
 	public void IngresarClave() {
-            int a ;
-            System.out.println("Ingrese clave");
+                
+                System.out.println("Ingrese su clave");
+                
+                
+            /*System.out.println("Ingrese clave");
              a = leer.nextInt();
-            if(a!= Identificacion){
+             if(a!= Identificacion){
+             do{
                 System.out.println("clave incorrecta");
                 a = leer.nextInt();
                 
                 
-            }else 
-                System.out.println("Clave correcta");
-                
+            }while(a!= Identificacion);
+             }else
+        System.out.println("Clave correcta");
+              */  
 	}
 
 	public void ElegirOpciones() {
@@ -32,19 +46,20 @@ public class Cliente {
 	}
 
 	public void IndicarvalorARetirar(){
-            int sacardinero;
+       /*int sacardinero;
             int dineroactual;
             Cuenta caj= new Cuenta();
             
             caj.getSaldo()=dineroactual;
             System.out.println("Dinero actual : "+dineroactual);
             System.out.println("ingrese valor a retirar :");
-            sacardinero = leer.nextInt();
+            
             if(dineroactual<sacardinero || sacardinero>0){
             	System.out.println("saldo insuficiente, ingrese nuevamente el monto");
-            		sacardinero = leer.nextInt();
+            		
             }else
            	caj.setSaldo(dineroactual-sacardinero);
+         */   
 	}
 
 }

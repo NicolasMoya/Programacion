@@ -5,6 +5,8 @@ public class Cuenta {
 	private int NumCuenta;
 	private int NumCliente;
 	private String Tipodecuenta;
+        private Transaccion transaccion[];
+        private Tarjeta tarjeta;
 
     public Cuenta() {
     }
@@ -22,8 +24,8 @@ public class Cuenta {
         this.Saldo = Saldo;
     }
 
-        
-    
+   
+
         
 	public void ConsultarCuenta() {
 		// TODO - implement Cuenta.ConsultarCuenta

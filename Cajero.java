@@ -3,6 +3,7 @@ package cajero;
 public class Cajero {
 
 	private String Clave;
+        private Transaccion transaccion[];
 
 	public void MostrarOpciones() {
 		// TODO - implement Cajero.MostrarOpciones
@@ -10,8 +11,7 @@ public class Cajero {
 	}
 
 	public void SolicitarClave() {
-		// TODO - implement Cajero.SolicitarClave
-		throw new UnsupportedOperationException();
+		
 	}
 
 	public void Verificarbanco() {
